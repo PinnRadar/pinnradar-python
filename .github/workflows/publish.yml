@@ -1,11 +1,11 @@
-# Publishes to PyPI when a GitHub release is published. Uses PyPI trusted
+# Publishes to PyPI when a version tag (v*) is pushed. Uses PyPI trusted
 # publishing (OIDC): no token is stored anywhere. Configure once on PyPI:
 # project "pinnradar", owner "PinnRadar", repo "pinnradar-python",
 # workflow "publish.yml", environment "pypi".
 name: Publish
 on:
-  release:
-    types: [published]
+  push:
+    tags: ["v*"]
   workflow_dispatch:
 jobs:
   publish:
