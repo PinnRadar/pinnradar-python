@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pinnradar"
+dynamic = ["version"]
+description = "Python client for the PinnRadar API: real-time Pinnacle odds, live and prematch markets, dropping-odds alerts over SSE."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+authors = [{ name = "PinnRadar", email = "info@pinnradar.com" }]
+keywords = ["pinnacle", "odds", "odds api", "pinnacle api", "sports betting", "live odds", "dropping odds", "sports data", "no vig"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://pinnradar.com"
+Documentation = "https://pinnradar.com/docs"
+Source = "https://github.com/PinnRadar/pinnradar-python"
+Pricing = "https://pinnradar.com/pinnacle-api-pricing"
+
+[tool.hatch.version]
+path = "src/pinnradar/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pinnradar"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
