@@ -1,6 +1,6 @@
 """PinnRadar: real-time Pinnacle odds API client. https://pinnradar.com/docs"""
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .client import AuthError, Client, PinnRadarError, RateLimitError, parse_sse  # noqa: E402
 from .odds import implied, margin, no_vig  # noqa: E402

@@ -153,7 +153,10 @@ class Client:
         since: Optional[int] = None,
         include_specials: Union[None, bool, str] = None,
     ) -> Dict[str, Any]:
-        """Full board for one sport: `event_type` "live" (default) or "prematch".
+        """Live board for one sport.
+
+        For prematch, use `prematch_fixtures()` / `prematch_markets()`: this endpoint answers
+        `event_type="prematch"` with 503 prematch_disabled.
 
         Pass the `last` value of the previous answer as `since` to receive only what changed.
         `include_specials=True` adds props, correct score and outrights ("nested" attaches them

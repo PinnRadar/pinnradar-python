@@ -1,6 +1,8 @@
-# pinnradar
+# pinnradar: Pinnacle odds API client for Python
 
 Python client for the [PinnRadar API](https://pinnradar.com): real-time **Pinnacle odds** as JSON. Live and prematch markets (moneyline, spreads, totals, team totals, every period), dropping-odds alerts over Server-Sent Events, and no-vig helpers.
+
+Pinnacle closed its public API to most users in July 2025. PinnRadar is an independent service (not affiliated with Pinnacle) that serves Pinnacle's live and prematch prices over a simple REST API and push streams, with a free tier.
 
 - No dependencies (standard library only), Python 3.8+
 - Typed, with clear errors (`AuthError`, `RateLimitError`)
